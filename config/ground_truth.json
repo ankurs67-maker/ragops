@@ -1,0 +1,3952 @@
+[
+  {
+    "query_id": "gt_001",
+    "query": "What company developed the Llama 2 model?",
+    "correct_answer": "Meta AI",
+    "acceptable_answers": [
+      "Meta",
+      "Meta AI",
+      "Facebook AI Research",
+      "FAIR"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "meta-llama__Llama-2-7b-hf.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Meta released Llama 2 in July 2023.",
+    "expected_chunk_keywords": [
+      "llama",
+      "meta",
+      "facebook"
+    ]
+  },
+  {
+    "query_id": "gt_002",
+    "query": "What does RLHF stand for?",
+    "correct_answer": "Reinforcement Learning from Human Feedback",
+    "acceptable_answers": [
+      "Reinforcement Learning from Human Feedback",
+      "reinforcement learning from human feedback"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Reinforcement_learning_from_human_feedback.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "RLHF is the core technique behind InstructGPT and ChatGPT.",
+    "expected_chunk_keywords": [
+      "reinforcement",
+      "human feedback",
+      "rlhf"
+    ]
+  },
+  {
+    "query_id": "gt_003",
+    "query": "Which organization created BLOOM?",
+    "correct_answer": "BigScience",
+    "acceptable_answers": [
+      "BigScience",
+      "bigscience",
+      "BigScience workshop"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "bigscience__bloom.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "BLOOM is a 176B multilingual model released by the BigScience collaborative.",
+    "expected_chunk_keywords": [
+      "bloom",
+      "bigscience"
+    ]
+  },
+  {
+    "query_id": "gt_004",
+    "query": "What will be the best AI model in 2030?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "don't have"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Future prediction — no document can answer this. Should trigger refusal.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_005",
+    "query": "Is GPT-4 open source?",
+    "correct_answer": "No, GPT-4 is not open source",
+    "acceptable_answers": [
+      "No",
+      "no",
+      "not open source",
+      "closed source",
+      "proprietary"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "OpenAI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "OpenAI has not released GPT-4 weights publicly.",
+    "expected_chunk_keywords": [
+      "gpt-4",
+      "openai",
+      "open source"
+    ]
+  },
+  {
+    "query_id": "gt_006",
+    "query": "What is the context window size of Llama 3.1 70B Instruct?",
+    "correct_answer": "128000 tokens",
+    "acceptable_answers": [
+      "128k",
+      "128,000",
+      "128000 tokens",
+      "128K tokens",
+      "128k context"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "meta-llama__Meta-Llama-3.1-70B-Instruct.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Llama 3.1 expanded context from 8K (Llama 3) to 128K.",
+    "expected_chunk_keywords": [
+      "llama",
+      "context",
+      "128k"
+    ]
+  },
+  {
+    "query_id": "gt_007",
+    "query": "What architecture does the original Transformer model use?",
+    "correct_answer": "Encoder-decoder architecture with multi-head self-attention",
+    "acceptable_answers": [
+      "self-attention",
+      "attention mechanism",
+      "encoder decoder",
+      "multi-head attention",
+      "encoder-decoder"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Transformer_machine_learning_model.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Introduced in 'Attention Is All You Need' (Vaswani et al., 2017).",
+    "expected_chunk_keywords": [
+      "transformer",
+      "attention",
+      "encoder",
+      "decoder"
+    ]
+  },
+  {
+    "query_id": "gt_008",
+    "query": "What accuracy did GPT-4 achieve on the MMLU benchmark?",
+    "correct_answer": "86.4%",
+    "acceptable_answers": [
+      "86.4",
+      "86.4%",
+      "86 percent",
+      "approximately 86"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Reported in GPT-4 technical report. Multi-hop: requires knowing GPT-4 and MMLU.",
+    "expected_chunk_keywords": [
+      "gpt-4",
+      "mmlu",
+      "86"
+    ]
+  },
+  {
+    "query_id": "gt_009",
+    "query": "Who are the founders of Anthropic?",
+    "correct_answer": "Dario Amodei and Daniela Amodei",
+    "acceptable_answers": [
+      "Dario Amodei",
+      "Daniela Amodei",
+      "Dario and Daniela Amodei",
+      "Amodei"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Anthropic.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Founded in 2021 by former OpenAI researchers.",
+    "expected_chunk_keywords": [
+      "anthropic",
+      "amodei"
+    ]
+  },
+  {
+    "query_id": "gt_010",
+    "query": "What is the embedding dimension of the sentence-transformers all-MiniLM-L6-v2 model?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "medium",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "The 384-dim fact exists in this project's settings.py, not in the downloaded corpus (Wikipedia/HuggingFace/PapersWithCode). A correctly scoped RAG system that answers only from its indexed documents cannot answer this — refusal is the correct behavior.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_011",
+    "query": "What is constitutional AI as developed by Anthropic?",
+    "correct_answer": "A training technique where AI systems are guided by a set of principles to be helpful, harmless, and honest",
+    "acceptable_answers": [
+      "anthropic",
+      "principles",
+      "helpful harmless honest",
+      "self-critique",
+      "constitutional"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Constitutional_AI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Introduced in Bai et al. 2022 'Constitutional AI: Harmlessness from AI Feedback'.",
+    "expected_chunk_keywords": [
+      "constitutional",
+      "anthropic",
+      "principles"
+    ]
+  },
+  {
+    "query_id": "gt_012",
+    "query": "What does RAG stand for in the context of language models?",
+    "correct_answer": "Retrieval-Augmented Generation",
+    "acceptable_answers": [
+      "Retrieval-Augmented Generation",
+      "retrieval augmented generation"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Retrieval-augmented_generation.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "RAG was introduced by Lewis et al. 2020.",
+    "expected_chunk_keywords": [
+      "retrieval",
+      "augmented",
+      "generation"
+    ]
+  },
+  {
+    "query_id": "gt_013",
+    "query": "Which model popularised the mixture of experts architecture for large language models?",
+    "correct_answer": "Mixtral 8x7B by Mistral AI",
+    "acceptable_answers": [
+      "Mixtral",
+      "Mistral MoE",
+      "Mixtral 8x7B",
+      "Mixtral by Mistral"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "mistralai__Mixtral-8x7B-v0.1.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Mixtral 8x7B released December 2023 made MoE mainstream for open models.",
+    "expected_chunk_keywords": [
+      "mixture",
+      "experts",
+      "mixtral"
+    ]
+  },
+  {
+    "query_id": "gt_014",
+    "query": "What stock price will Nvidia reach in 2025?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Financial prediction — out of scope for AI/LLM knowledge base.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_015",
+    "query": "What is chain-of-thought prompting?",
+    "correct_answer": "A prompting technique that encourages LLMs to reason step-by-step before providing a final answer",
+    "acceptable_answers": [
+      "step by step",
+      "reasoning",
+      "intermediate steps",
+      "chain of thought",
+      "step-by-step"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Chain-of-thought_prompting.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Introduced by Wei et al. 2022 'Chain-of-Thought Prompting Elicits Reasoning in LLMs'.",
+    "expected_chunk_keywords": [
+      "chain",
+      "thought",
+      "prompting",
+      "reasoning"
+    ]
+  },
+  {
+    "query_id": "gt_016",
+    "query": "What is the parameter count of GPT-NeoX-20B?",
+    "correct_answer": "20 billion parameters",
+    "acceptable_answers": [
+      "20B",
+      "20 billion",
+      "20 billion parameters",
+      "20-billion"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "EleutherAI__gpt-neox-20b.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "GPT-NeoX-20B released by EleutherAI in April 2022.",
+    "expected_chunk_keywords": [
+      "gpt-neox",
+      "20b",
+      "eleutherai"
+    ]
+  },
+  {
+    "query_id": "gt_017",
+    "query": "Who are the founders of Hugging Face?",
+    "correct_answer": "Clement Delangue, Julien Chaumond, and Thomas Wolf",
+    "acceptable_answers": [
+      "Clement Delangue",
+      "Julien Chaumond",
+      "Thomas Wolf",
+      "Delangue",
+      "Chaumond"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Hugging_Face.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Hugging Face founded in 2016, pivoted to NLP in 2018.",
+    "expected_chunk_keywords": [
+      "hugging face",
+      "founded",
+      "delangue"
+    ]
+  },
+  {
+    "query_id": "gt_018",
+    "query": "Comparing Mistral 7B and Llama 2 7B, which achieves better performance on coding benchmarks?",
+    "correct_answer": "Mistral 7B outperforms Llama 2 7B on coding benchmarks",
+    "acceptable_answers": [
+      "Mistral 7B",
+      "mistral",
+      "mistral outperforms",
+      "mistral is better"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "mistralai__Mistral-7B-v0.1.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "Reported in Mistral 7B paper. Requires comparing two model cards.",
+    "expected_chunk_keywords": [
+      "mistral",
+      "llama",
+      "benchmark",
+      "coding"
+    ]
+  },
+  {
+    "query_id": "gt_019",
+    "query": "What is BERT and who created it?",
+    "correct_answer": "BERT (Bidirectional Encoder Representations from Transformers) is a pre-trained language model created by Google",
+    "acceptable_answers": [
+      "Google",
+      "Bidirectional Encoder Representations",
+      "bert",
+      "google research"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "BERT_language_model.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "BERT introduced by Devlin et al. at Google in 2018.",
+    "expected_chunk_keywords": [
+      "bert",
+      "google",
+      "bidirectional"
+    ]
+  },
+  {
+    "query_id": "gt_020",
+    "query": "What is the BLEU score used to evaluate?",
+    "correct_answer": "BLEU is a metric for evaluating the quality of machine-translated text",
+    "acceptable_answers": [
+      "machine translation",
+      "translation quality",
+      "text generation evaluation",
+      "bilingual evaluation"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "BLEU.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-06-29",
+    "notes": "BLEU = Bilingual Evaluation Understudy, proposed by Papineni et al. 2002.",
+    "expected_chunk_keywords": [
+      "bleu",
+      "translation",
+      "evaluation"
+    ]
+  },
+  {
+    "query_id": "gt_021",
+    "query": "What does DPO stand for in LLM training?",
+    "correct_answer": "Direct Preference Optimization",
+    "acceptable_answers": [
+      "Direct Preference Optimization",
+      "direct preference optimization"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Direct_preference_optimization.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "DPO introduced by Rafailov et al. 2023; Wikipedia article in corpus.",
+    "expected_chunk_keywords": [
+      "direct",
+      "preference",
+      "optimization"
+    ]
+  },
+  {
+    "query_id": "gt_022",
+    "query": "What is a vector database used for?",
+    "correct_answer": "Storing and searching high-dimensional vector embeddings for similarity search",
+    "acceptable_answers": [
+      "embedding",
+      "similarity search",
+      "vectors",
+      "similarity"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Vector_database.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Vector database Wikipedia article added 2026-07.",
+    "expected_chunk_keywords": [
+      "vector",
+      "database",
+      "embedding"
+    ]
+  },
+  {
+    "query_id": "gt_023",
+    "query": "What is knowledge distillation in machine learning?",
+    "correct_answer": "A technique where a smaller student model is trained to reproduce the behavior of a larger teacher model",
+    "acceptable_answers": [
+      "student",
+      "teacher",
+      "smaller model",
+      "transfer"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Knowledge_distillation.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Hinton et al. 2015 technique; Wikipedia article in corpus.",
+    "expected_chunk_keywords": [
+      "distillation",
+      "student",
+      "teacher"
+    ]
+  },
+  {
+    "query_id": "gt_024",
+    "query": "Which company introduced the Vision Transformer (ViT)?",
+    "correct_answer": "Google",
+    "acceptable_answers": [
+      "Google",
+      "Google Research",
+      "Google Brain"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Vision_transformer.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "ViT introduced by Dosovitskiy et al. at Google, 2020.",
+    "expected_chunk_keywords": [
+      "vision",
+      "transformer",
+      "google"
+    ]
+  },
+  {
+    "query_id": "gt_025",
+    "query": "What is prompt injection?",
+    "correct_answer": "An attack where malicious instructions embedded in input text override an LLM's original instructions",
+    "acceptable_answers": [
+      "attack",
+      "malicious",
+      "override",
+      "instructions"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Prompt_injection.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Prompt injection Wikipedia article added 2026-07.",
+    "expected_chunk_keywords": [
+      "prompt",
+      "injection",
+      "attack"
+    ]
+  },
+  {
+    "query_id": "gt_026",
+    "query": "What is model collapse in AI?",
+    "correct_answer": "Degradation that occurs when models are trained on data generated by other models",
+    "acceptable_answers": [
+      "synthetic data",
+      "generated data",
+      "degrad",
+      "recursively"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Model_collapse.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Model collapse Wikipedia article added 2026-07.",
+    "expected_chunk_keywords": [
+      "model collapse",
+      "synthetic",
+      "training"
+    ]
+  },
+  {
+    "query_id": "gt_027",
+    "query": "Which company develops the Grok chatbot?",
+    "correct_answer": "xAI",
+    "acceptable_answers": [
+      "xAI",
+      "x.ai"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "xAI_company.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Grok is developed by xAI. Source re-pointed 2026-07-07: the bare 'xAI' Wikipedia title is a disambiguation page; the real article is 'xAI (company)'.",
+    "expected_chunk_keywords": [
+      "grok",
+      "xai"
+    ]
+  },
+  {
+    "query_id": "gt_028",
+    "query": "What kind of product is Perplexity AI known for?",
+    "correct_answer": "An AI-powered search engine / answer engine",
+    "acceptable_answers": [
+      "search",
+      "answer engine",
+      "search engine"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Perplexity_AI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Perplexity AI Wikipedia article added 2026-07.",
+    "expected_chunk_keywords": [
+      "perplexity",
+      "search"
+    ]
+  },
+  {
+    "query_id": "gt_029",
+    "query": "Which company created the Stable Diffusion image model?",
+    "correct_answer": "Stability AI",
+    "acceptable_answers": [
+      "Stability AI",
+      "stability"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Stability_AI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Stability AI funded/distributed Stable Diffusion.",
+    "expected_chunk_keywords": [
+      "stable diffusion",
+      "stability"
+    ]
+  },
+  {
+    "query_id": "gt_030",
+    "query": "What is byte pair encoding used for in language models?",
+    "correct_answer": "Tokenization — splitting text into subword units",
+    "acceptable_answers": [
+      "tokenization",
+      "subword",
+      "tokenizer",
+      "compression"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Byte_pair_encoding.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "BPE Wikipedia article added 2026-07 as alternate for Tokenization (ML).",
+    "expected_chunk_keywords": [
+      "byte pair",
+      "encoding",
+      "subword"
+    ]
+  },
+  {
+    "query_id": "gt_031",
+    "query": "What is a context window in a language model?",
+    "correct_answer": "The maximum amount of text (tokens) a model can process at once",
+    "acceptable_answers": [
+      "tokens",
+      "maximum",
+      "input",
+      "process"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Context_window.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Context window Wikipedia article added 2026-07.",
+    "expected_chunk_keywords": [
+      "context window",
+      "tokens"
+    ]
+  },
+  {
+    "query_id": "gt_032",
+    "query": "Who created the LangChain framework?",
+    "correct_answer": "Harrison Chase",
+    "acceptable_answers": [
+      "Harrison Chase",
+      "Chase"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "LangChain.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "LangChain launched by Harrison Chase in October 2022.",
+    "expected_chunk_keywords": [
+      "langchain",
+      "chase"
+    ]
+  },
+  {
+    "query_id": "gt_033",
+    "query": "What is AI alignment concerned with?",
+    "correct_answer": "Ensuring AI systems pursue goals aligned with human values and intentions",
+    "acceptable_answers": [
+      "human values",
+      "intended",
+      "aligned",
+      "goals"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "AI_alignment.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "AI alignment Wikipedia article added 2026-07.",
+    "expected_chunk_keywords": [
+      "alignment",
+      "values",
+      "goals"
+    ]
+  },
+  {
+    "query_id": "gt_034",
+    "query": "Which organization released the Granite 3.0 language models?",
+    "correct_answer": "IBM",
+    "acceptable_answers": [
+      "IBM",
+      "ibm"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "ibm-granite__granite-3.0-8b-instruct.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "IBM Granite model card added 2026-07.",
+    "expected_chunk_keywords": [
+      "granite",
+      "ibm"
+    ]
+  },
+  {
+    "query_id": "gt_035",
+    "query": "Which company developed Codestral 22B?",
+    "correct_answer": "Mistral AI",
+    "acceptable_answers": [
+      "Mistral AI",
+      "Mistral"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "mistralai__Codestral-22B-v0.1.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Codestral model card added 2026-07.",
+    "expected_chunk_keywords": [
+      "codestral",
+      "mistral"
+    ]
+  },
+  {
+    "query_id": "gt_036",
+    "query": "What base model is Zephyr 7B Beta fine-tuned from?",
+    "correct_answer": "Mistral-7B",
+    "acceptable_answers": [
+      "Mistral-7B",
+      "Mistral 7B",
+      "mistral"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "HuggingFaceH4__zephyr-7b-beta.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Zephyr card states fine-tuned from mistralai/Mistral-7B-v0.1.",
+    "expected_chunk_keywords": [
+      "zephyr",
+      "mistral",
+      "fine-tuned"
+    ]
+  },
+  {
+    "query_id": "gt_037",
+    "query": "Who developed the Orca 2 model?",
+    "correct_answer": "Microsoft",
+    "acceptable_answers": [
+      "Microsoft",
+      "microsoft"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "microsoft__Orca-2-13b.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Orca 2 model card added 2026-07.",
+    "expected_chunk_keywords": [
+      "orca",
+      "microsoft"
+    ]
+  },
+  {
+    "query_id": "gt_038",
+    "query": "What does agentic AI refer to?",
+    "correct_answer": "AI systems that can autonomously plan and take actions to achieve goals",
+    "acceptable_answers": [
+      "autonomous",
+      "actions",
+      "goals",
+      "agents",
+      "plan"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Agentic_AI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Agentic AI Wikipedia article added 2026-07.",
+    "expected_chunk_keywords": [
+      "agentic",
+      "autonomous"
+    ]
+  },
+  {
+    "query_id": "gt_039",
+    "query": "Which project created StarCoder2?",
+    "correct_answer": "BigCode",
+    "acceptable_answers": [
+      "BigCode",
+      "bigcode"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "bigcode__starcoder2-15b.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "StarCoder2 is a BigCode project model (HF + ServiceNow).",
+    "expected_chunk_keywords": [
+      "starcoder",
+      "bigcode"
+    ]
+  },
+  {
+    "query_id": "gt_040",
+    "query": "What online education company did Andrew Ng co-found?",
+    "correct_answer": "Coursera",
+    "acceptable_answers": [
+      "Coursera",
+      "coursera"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Andrew_Ng.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Andrew Ng co-founded Coursera in 2012.",
+    "expected_chunk_keywords": [
+      "andrew ng",
+      "coursera"
+    ]
+  },
+  {
+    "query_id": "gt_041",
+    "query": "What score did Claude 3 Opus achieve on BIG-Bench Hard?",
+    "correct_answer": "86.8%",
+    "acceptable_answers": [
+      "86.8",
+      "86.8%"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_bbh.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_bbh.txt leaderboard (3-shot CoT).",
+    "expected_chunk_keywords": [
+      "claude",
+      "bbh",
+      "86.8"
+    ]
+  },
+  {
+    "query_id": "gt_042",
+    "query": "What did Llama 3.1 70B score on BIG-Bench Hard?",
+    "correct_answer": "81.6%",
+    "acceptable_answers": [
+      "81.6",
+      "81.6%"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_bbh.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_bbh.txt leaderboard.",
+    "expected_chunk_keywords": [
+      "llama",
+      "bbh",
+      "81.6"
+    ]
+  },
+  {
+    "query_id": "gt_043",
+    "query": "Approximately how many prompts does the IFEval benchmark contain?",
+    "correct_answer": "Approximately 500",
+    "acceptable_answers": [
+      "500",
+      "roughly 500",
+      "approximately 500"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_ifeval.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_ifeval.txt task definition.",
+    "expected_chunk_keywords": [
+      "ifeval",
+      "500",
+      "prompts"
+    ]
+  },
+  {
+    "query_id": "gt_044",
+    "query": "What did Llama 3.1 405B Instruct score on IFEval?",
+    "correct_answer": "88.6%",
+    "acceptable_answers": [
+      "88.6",
+      "88.6%"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_ifeval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_ifeval.txt leaderboard.",
+    "expected_chunk_keywords": [
+      "llama",
+      "ifeval",
+      "88.6"
+    ]
+  },
+  {
+    "query_id": "gt_045",
+    "query": "What strict accuracy did GPT-4 achieve on IFEval?",
+    "correct_answer": "79.3%",
+    "acceptable_answers": [
+      "79.3",
+      "79.3%"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_ifeval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_ifeval.txt leaderboard.",
+    "expected_chunk_keywords": [
+      "gpt-4",
+      "ifeval",
+      "79.3"
+    ]
+  },
+  {
+    "query_id": "gt_046",
+    "query": "How many questions are in the GPQA Diamond subset?",
+    "correct_answer": "198",
+    "acceptable_answers": [
+      "198"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_gpqa.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_gpqa.txt task definition.",
+    "expected_chunk_keywords": [
+      "gpqa",
+      "diamond",
+      "198"
+    ]
+  },
+  {
+    "query_id": "gt_047",
+    "query": "What did Claude 3.5 Sonnet score on GPQA Diamond?",
+    "correct_answer": "59.4%",
+    "acceptable_answers": [
+      "59.4",
+      "59.4%"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gpqa.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_gpqa.txt leaderboard.",
+    "expected_chunk_keywords": [
+      "claude",
+      "gpqa",
+      "59.4"
+    ]
+  },
+  {
+    "query_id": "gt_048",
+    "query": "Roughly what accuracy do PhD-level experts achieve on GPQA within their own domain?",
+    "correct_answer": "Approximately 65-75%",
+    "acceptable_answers": [
+      "65",
+      "70",
+      "75",
+      "65-75"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gpqa.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_gpqa.txt human baseline section.",
+    "expected_chunk_keywords": [
+      "gpqa",
+      "expert",
+      "phd"
+    ]
+  },
+  {
+    "query_id": "gt_049",
+    "query": "Which model is the anchored 50.0 baseline in Arena-Hard?",
+    "correct_answer": "GPT-4-0314",
+    "acceptable_answers": [
+      "GPT-4-0314",
+      "gpt-4-0314"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_arena_hard.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_arena_hard.txt task definition.",
+    "expected_chunk_keywords": [
+      "arena",
+      "baseline",
+      "50.0"
+    ]
+  },
+  {
+    "query_id": "gt_050",
+    "query": "What did GPT-4-Turbo score on Arena-Hard?",
+    "correct_answer": "82.6",
+    "acceptable_answers": [
+      "82.6"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_arena_hard.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_arena_hard.txt leaderboard.",
+    "expected_chunk_keywords": [
+      "gpt-4-turbo",
+      "arena",
+      "82.6"
+    ]
+  },
+  {
+    "query_id": "gt_051",
+    "query": "How many math word problems does the GSM8K dataset contain?",
+    "correct_answer": "8,500",
+    "acceptable_answers": [
+      "8500",
+      "8,500"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_gsm8k.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_gsm8k.txt overview.",
+    "expected_chunk_keywords": [
+      "gsm8k",
+      "8,500",
+      "problems"
+    ]
+  },
+  {
+    "query_id": "gt_052",
+    "query": "What did Claude 3 Opus score on GSM8K?",
+    "correct_answer": "95.0%",
+    "acceptable_answers": [
+      "95.0",
+      "95%",
+      "95"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gsm8k.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_gsm8k.txt leaderboard.",
+    "expected_chunk_keywords": [
+      "claude",
+      "gsm8k",
+      "95"
+    ]
+  },
+  {
+    "query_id": "gt_053",
+    "query": "How many Python programming problems are in HumanEval?",
+    "correct_answer": "164",
+    "acceptable_answers": [
+      "164"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_humaneval.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_humaneval.txt overview.",
+    "expected_chunk_keywords": [
+      "humaneval",
+      "164",
+      "problems"
+    ]
+  },
+  {
+    "query_id": "gt_054",
+    "query": "What pass@1 did GPT-4o achieve on HumanEval?",
+    "correct_answer": "90.2%",
+    "acceptable_answers": [
+      "90.2",
+      "90.2%"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_humaneval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_humaneval.txt leaderboard.",
+    "expected_chunk_keywords": [
+      "gpt-4o",
+      "humaneval",
+      "90.2"
+    ]
+  },
+  {
+    "query_id": "gt_055",
+    "query": "What did GPT-4o score on the MMLU benchmark?",
+    "correct_answer": "87.2%",
+    "acceptable_answers": [
+      "87.2",
+      "87.2%"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_mmlu.txt leaderboard.",
+    "expected_chunk_keywords": [
+      "gpt-4o",
+      "mmlu",
+      "87.2"
+    ]
+  },
+  {
+    "query_id": "gt_056",
+    "query": "How many subjects does the MMLU benchmark cover?",
+    "correct_answer": "57",
+    "acceptable_answers": [
+      "57"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_mmlu.txt overview.",
+    "expected_chunk_keywords": [
+      "mmlu",
+      "57",
+      "subjects"
+    ]
+  },
+  {
+    "query_id": "gt_057",
+    "query": "What did BLOOM 176B score on MMLU?",
+    "correct_answer": "39.2%",
+    "acceptable_answers": [
+      "39.2",
+      "39.2%"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "From benchmark_mmlu.txt leaderboard.",
+    "expected_chunk_keywords": [
+      "bloom",
+      "mmlu",
+      "39.2"
+    ]
+  },
+  {
+    "query_id": "gt_058",
+    "query": "Which model scores higher on MMLU: GPT-4 or Gemini 1.5 Pro?",
+    "correct_answer": "GPT-4 (86.4% vs 85.9%)",
+    "acceptable_answers": [
+      "GPT-4",
+      "gpt-4"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "86.4 vs 85.9 from benchmark_mmlu.txt.",
+    "expected_chunk_keywords": [
+      "mmlu",
+      "gpt-4",
+      "gemini"
+    ]
+  },
+  {
+    "query_id": "gt_059",
+    "query": "Which scores higher on GSM8K: Mixtral 8x7B or Mistral 7B?",
+    "correct_answer": "Mixtral 8x7B (74.4% vs 52.1%)",
+    "acceptable_answers": [
+      "Mixtral",
+      "mixtral"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gsm8k.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "74.4 vs 52.1 from benchmark_gsm8k.txt.",
+    "expected_chunk_keywords": [
+      "gsm8k",
+      "mixtral",
+      "mistral"
+    ]
+  },
+  {
+    "query_id": "gt_060",
+    "query": "On HumanEval, which performs better: Llama 2 70B or GPT-3.5-Turbo?",
+    "correct_answer": "GPT-3.5-Turbo (48.1% vs 29.9%)",
+    "acceptable_answers": [
+      "GPT-3.5",
+      "gpt-3.5"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_humaneval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "48.1 vs 29.9 from benchmark_humaneval.txt.",
+    "expected_chunk_keywords": [
+      "humaneval",
+      "llama",
+      "gpt-3.5"
+    ]
+  },
+  {
+    "query_id": "gt_061",
+    "query": "Which model performs better on GPQA Diamond: Claude 3 Opus or GPT-4o?",
+    "correct_answer": "GPT-4o (53.6% vs 50.4%)",
+    "acceptable_answers": [
+      "GPT-4o",
+      "gpt-4o"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gpqa.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "53.6 vs 50.4 from benchmark_gpqa.txt.",
+    "expected_chunk_keywords": [
+      "gpqa",
+      "claude",
+      "gpt-4o"
+    ]
+  },
+  {
+    "query_id": "gt_062",
+    "query": "Per IFEval, which follows instructions better: Llama 3.1 405B or GPT-4?",
+    "correct_answer": "Llama 3.1 405B (88.6% vs 79.3%)",
+    "acceptable_answers": [
+      "Llama 3.1 405B",
+      "llama"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_ifeval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "88.6 vs 79.3 from benchmark_ifeval.txt.",
+    "expected_chunk_keywords": [
+      "ifeval",
+      "llama",
+      "gpt-4"
+    ]
+  },
+  {
+    "query_id": "gt_063",
+    "query": "Which scored higher on MMLU: Claude 3 Opus or GPT-4?",
+    "correct_answer": "Claude 3 Opus (86.8% vs 86.4%)",
+    "acceptable_answers": [
+      "Claude 3 Opus",
+      "Claude",
+      "claude"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "86.8 vs 86.4 from benchmark_mmlu.txt.",
+    "expected_chunk_keywords": [
+      "mmlu",
+      "claude",
+      "gpt-4"
+    ]
+  },
+  {
+    "query_id": "gt_064",
+    "query": "Which model has more parameters: GPT-NeoX-20B or BLOOM?",
+    "correct_answer": "BLOOM (176B vs 20B)",
+    "acceptable_answers": [
+      "BLOOM",
+      "bloom",
+      "176"
+    ],
+    "category": "comparative",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "BLOOM 176B vs GPT-NeoX 20B; both stated in benchmark files and model cards.",
+    "expected_chunk_keywords": [
+      "bloom",
+      "176",
+      "20b"
+    ]
+  },
+  {
+    "query_id": "gt_065",
+    "query": "Which model scored lower on MMLU: Falcon 40B or Llama 2 70B?",
+    "correct_answer": "Falcon 40B (55.4% vs 68.9%)",
+    "acceptable_answers": [
+      "Falcon",
+      "falcon"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "55.4 vs 68.9 from benchmark_mmlu.txt.",
+    "expected_chunk_keywords": [
+      "mmlu",
+      "falcon",
+      "llama"
+    ]
+  },
+  {
+    "query_id": "gt_066",
+    "query": "On BIG-Bench Hard, which does better: Claude 3 Haiku or Claude 3 Opus?",
+    "correct_answer": "Claude 3 Opus (86.8% vs 73.7%)",
+    "acceptable_answers": [
+      "Opus",
+      "opus"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_bbh.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "86.8 vs 73.7 from benchmark_bbh.txt.",
+    "expected_chunk_keywords": [
+      "bbh",
+      "haiku",
+      "opus"
+    ]
+  },
+  {
+    "query_id": "gt_067",
+    "query": "Which scores higher on Arena-Hard: Claude 3 Opus or GPT-4-Turbo?",
+    "correct_answer": "GPT-4-Turbo (82.6 vs 60.4)",
+    "acceptable_answers": [
+      "GPT-4-Turbo",
+      "gpt-4-turbo",
+      "turbo"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_arena_hard.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "82.6 vs 60.4 from benchmark_arena_hard.txt.",
+    "expected_chunk_keywords": [
+      "arena",
+      "claude",
+      "turbo"
+    ]
+  },
+  {
+    "query_id": "gt_068",
+    "query": "Which model is better on GSM8K: Llama 2 13B or Llama 2 70B?",
+    "correct_answer": "Llama 2 70B (56.8% vs 28.7%)",
+    "acceptable_answers": [
+      "70B",
+      "70b"
+    ],
+    "category": "comparative",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_gsm8k.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "56.8 vs 28.7 from benchmark_gsm8k.txt.",
+    "expected_chunk_keywords": [
+      "gsm8k",
+      "llama",
+      "70b"
+    ]
+  },
+  {
+    "query_id": "gt_069",
+    "query": "Which achieves higher HumanEval pass@1: Claude 3.5 Sonnet or GPT-4?",
+    "correct_answer": "Claude 3.5 Sonnet (92.0% vs 67.0%)",
+    "acceptable_answers": [
+      "Claude 3.5 Sonnet",
+      "Sonnet",
+      "sonnet"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_humaneval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "92.0 vs 67.0 from benchmark_humaneval.txt.",
+    "expected_chunk_keywords": [
+      "humaneval",
+      "sonnet",
+      "gpt-4"
+    ]
+  },
+  {
+    "query_id": "gt_070",
+    "query": "Did GPT-4 score above or below the expert human baseline on MMLU?",
+    "correct_answer": "Below (86.4% vs 89.8% expert baseline)",
+    "acceptable_answers": [
+      "below",
+      "lower",
+      "under"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "GPT-4 86.4 vs expert human 89.8 from benchmark_mmlu.txt.",
+    "expected_chunk_keywords": [
+      "mmlu",
+      "human",
+      "86.4"
+    ]
+  },
+  {
+    "query_id": "gt_071",
+    "query": "Which scores higher on GPQA Diamond: Llama 3.1 70B or Llama 3.1 405B?",
+    "correct_answer": "Llama 3.1 405B (51.1% vs 46.7%)",
+    "acceptable_answers": [
+      "405B",
+      "405b"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gpqa.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "51.1 vs 46.7 from benchmark_gpqa.txt.",
+    "expected_chunk_keywords": [
+      "gpqa",
+      "llama",
+      "405b"
+    ]
+  },
+  {
+    "query_id": "gt_072",
+    "query": "Which company released the Llama 3.2 model family?",
+    "correct_answer": "Meta",
+    "acceptable_answers": [
+      "Meta",
+      "meta"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "meta-llama__Llama-3.2-1B.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Llama 3.2 cards added to corpus 2026-07.",
+    "expected_chunk_keywords": [
+      "llama",
+      "3.2",
+      "meta"
+    ]
+  },
+  {
+    "query_id": "gt_073",
+    "query": "Which organization develops the Qwen2.5 model series?",
+    "correct_answer": "Alibaba Cloud (Qwen team)",
+    "acceptable_answers": [
+      "Alibaba",
+      "Qwen team"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Qwen__Qwen2.5-72B-Instruct.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Qwen2.5 cards added to corpus 2026-07.",
+    "expected_chunk_keywords": [
+      "qwen",
+      "alibaba"
+    ]
+  },
+  {
+    "query_id": "gt_074",
+    "query": "What type of model is Llama 3.2 11B Vision?",
+    "correct_answer": "A multimodal vision-language model",
+    "acceptable_answers": [
+      "vision",
+      "multimodal",
+      "image"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "meta-llama__Llama-3.2-11B-Vision.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Llama 3.2 Vision card added 2026-07.",
+    "expected_chunk_keywords": [
+      "llama",
+      "vision",
+      "multimodal"
+    ]
+  },
+  {
+    "query_id": "gt_075",
+    "query": "Which two DeepSeek models were combined to create DeepSeek-V2.5?",
+    "correct_answer": "DeepSeek-V2-Chat and DeepSeek-Coder-V2",
+    "acceptable_answers": [
+      "Chat",
+      "Coder",
+      "chat",
+      "coder"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "deepseek-ai__DeepSeek-V2.5.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "V2.5 card describes merging the chat and coder models.",
+    "expected_chunk_keywords": [
+      "deepseek",
+      "chat",
+      "coder"
+    ]
+  },
+  {
+    "query_id": "gt_076",
+    "query": "How many parameters does Phi-3.5-mini have?",
+    "correct_answer": "3.8 billion",
+    "acceptable_answers": [
+      "3.8",
+      "3.8B",
+      "3.8 billion"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "microsoft__Phi-3.5-mini-instruct.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Phi-3.5-mini card states 3.8B parameters.",
+    "expected_chunk_keywords": [
+      "phi",
+      "3.8",
+      "parameters"
+    ]
+  },
+  {
+    "query_id": "gt_077",
+    "query": "Which company released Mixtral 8x22B?",
+    "correct_answer": "Mistral AI",
+    "acceptable_answers": [
+      "Mistral AI",
+      "Mistral",
+      "mistral"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "mistralai__Mixtral-8x22B-Instruct-v0.1.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Mixtral 8x22B Instruct card added 2026-07.",
+    "expected_chunk_keywords": [
+      "mixtral",
+      "mistral"
+    ]
+  },
+  {
+    "query_id": "gt_078",
+    "query": "What is Codestral 22B specialized for?",
+    "correct_answer": "Code generation",
+    "acceptable_answers": [
+      "code",
+      "coding",
+      "programming"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "mistralai__Codestral-22B-v0.1.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Codestral is Mistral's code model.",
+    "expected_chunk_keywords": [
+      "codestral",
+      "code"
+    ]
+  },
+  {
+    "query_id": "gt_079",
+    "query": "Which organization created Hermes 3 Llama 3.1 8B?",
+    "correct_answer": "Nous Research",
+    "acceptable_answers": [
+      "Nous Research",
+      "Nous",
+      "NousResearch"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "NousResearch__Hermes-3-Llama-3.1-8B.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Hermes 3 card added 2026-07.",
+    "expected_chunk_keywords": [
+      "hermes",
+      "nous"
+    ]
+  },
+  {
+    "query_id": "gt_080",
+    "query": "What base model was OpenHermes 2.5 trained on?",
+    "correct_answer": "Mistral 7B",
+    "acceptable_answers": [
+      "Mistral",
+      "mistral"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "teknium__OpenHermes-2.5-Mistral-7B.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "OpenHermes 2.5 is a Mistral 7B fine-tune.",
+    "expected_chunk_keywords": [
+      "openhermes",
+      "mistral"
+    ]
+  },
+  {
+    "query_id": "gt_081",
+    "query": "Which company released StableLM 2 12B?",
+    "correct_answer": "Stability AI",
+    "acceptable_answers": [
+      "Stability AI",
+      "Stability",
+      "stability"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "stabilityai__stablelm-2-12b.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "StableLM 2 card added 2026-07.",
+    "expected_chunk_keywords": [
+      "stablelm",
+      "stability"
+    ]
+  },
+  {
+    "query_id": "gt_082",
+    "query": "What is the parameter count of StarCoder2-15B?",
+    "correct_answer": "15 billion",
+    "acceptable_answers": [
+      "15 billion",
+      "15B",
+      "15b"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "bigcode__starcoder2-15b.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "StarCoder2-15B card added 2026-07.",
+    "expected_chunk_keywords": [
+      "starcoder",
+      "15"
+    ]
+  },
+  {
+    "query_id": "gt_083",
+    "query": "Which organization developed Flan-T5 XXL?",
+    "correct_answer": "Google",
+    "acceptable_answers": [
+      "Google",
+      "google"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "google__flan-t5-xxl.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Flan-T5 XXL card added 2026-07.",
+    "expected_chunk_keywords": [
+      "flan",
+      "t5",
+      "google"
+    ]
+  },
+  {
+    "query_id": "gt_084",
+    "query": "What will Anthropic's next model be called?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Future/unannounced — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_085",
+    "query": "How many employees does OpenAI have today?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "medium",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Current headcount not in corpus — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_086",
+    "query": "What is the best pizza restaurant in San Francisco?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Entirely outside the AI/ML domain — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_087",
+    "query": "What will GPT-6 score on MMLU?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Future prediction — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_088",
+    "query": "What is the personal email address of Sam Altman?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Private personal information — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_089",
+    "query": "How do I fix a leaking kitchen faucet?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Entirely outside the AI/ML domain — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_090",
+    "query": "What was the exact training compute in FLOPs used for Claude 3 Opus?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "medium",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Undisclosed by Anthropic; not in corpus — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_091",
+    "query": "Which AI company will have the largest market cap in 2030?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Future financial prediction — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_092",
+    "query": "What score did GPT-4 achieve on the bar exam in Spain?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "hard",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Spanish bar exam result does not exist in corpus (only US bar widely reported, and not indexed) — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_093",
+    "query": "GPT-4 was created by Meta, wasn't it?",
+    "correct_answer": "No, GPT-4 was created by OpenAI",
+    "acceptable_answers": [
+      "OpenAI",
+      "openai",
+      "No"
+    ],
+    "category": "adversarial",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "OpenAI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "False-premise question; model must correct it.",
+    "expected_chunk_keywords": [
+      "gpt-4",
+      "openai"
+    ]
+  },
+  {
+    "query_id": "gt_094",
+    "query": "BLOOM was developed by OpenAI, right?",
+    "correct_answer": "No, BLOOM was developed by BigScience",
+    "acceptable_answers": [
+      "BigScience",
+      "bigscience",
+      "No"
+    ],
+    "category": "adversarial",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "BLOOM_language_model.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "False-premise question; corpus attributes BLOOM to BigScience.",
+    "expected_chunk_keywords": [
+      "bloom",
+      "bigscience"
+    ]
+  },
+  {
+    "query_id": "gt_095",
+    "query": "Is it true that Llama 2's model weights were never released to the public?",
+    "correct_answer": "No, Llama 2 weights are openly available under Meta's community license",
+    "acceptable_answers": [
+      "No",
+      "open",
+      "available",
+      "released"
+    ],
+    "category": "adversarial",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "meta-llama__Llama-2-7b-hf.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "False-premise; Llama 2 weights are publicly downloadable.",
+    "expected_chunk_keywords": [
+      "llama",
+      "license",
+      "weights"
+    ]
+  },
+  {
+    "query_id": "gt_096",
+    "query": "Did GPT-4 score 99% on MMLU?",
+    "correct_answer": "No, GPT-4 scored 86.4% on MMLU",
+    "acceptable_answers": [
+      "86.4",
+      "No",
+      "no"
+    ],
+    "category": "adversarial",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "False number in premise; correct value 86.4%.",
+    "expected_chunk_keywords": [
+      "gpt-4",
+      "mmlu",
+      "86.4"
+    ]
+  },
+  {
+    "query_id": "gt_097",
+    "query": "Anthropic was founded by Elon Musk, correct?",
+    "correct_answer": "No, Anthropic was founded by Dario Amodei and Daniela Amodei",
+    "acceptable_answers": [
+      "Amodei",
+      "No",
+      "no"
+    ],
+    "category": "adversarial",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Anthropic.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "False-premise; founders are the Amodei siblings.",
+    "expected_chunk_keywords": [
+      "anthropic",
+      "amodei"
+    ]
+  },
+  {
+    "query_id": "gt_098",
+    "query": "How many parameters does the 176-billion-parameter BLOOM model have?",
+    "correct_answer": "176 billion",
+    "acceptable_answers": [
+      "176"
+    ],
+    "category": "adversarial",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "bigscience__bloom.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "Answer embedded in question — tests whether model stays grounded instead of overthinking.",
+    "expected_chunk_keywords": [
+      "bloom",
+      "176"
+    ]
+  },
+  {
+    "query_id": "gt_099",
+    "query": "Was the Transformer architecture invented by OpenAI?",
+    "correct_answer": "No, it was introduced by researchers at Google",
+    "acceptable_answers": [
+      "Google",
+      "google",
+      "No",
+      "Vaswani"
+    ],
+    "category": "adversarial",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Transformer_machine_learning_model.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "False-premise; 'Attention Is All You Need' was Google (Vaswani et al. 2017).",
+    "expected_chunk_keywords": [
+      "transformer",
+      "google",
+      "attention"
+    ]
+  },
+  {
+    "query_id": "gt_100",
+    "query": "Did Mistral 7B outperform Llama 2 13B on benchmarks?",
+    "correct_answer": "Yes, Mistral 7B outperforms Llama 2 13B",
+    "acceptable_answers": [
+      "Yes",
+      "yes",
+      "outperform"
+    ],
+    "category": "adversarial",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "mistralai__Mistral-7B-v0.1.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-06",
+    "notes": "True-premise leading question; Mistral 7B card claims superiority over Llama 2 13B.",
+    "expected_chunk_keywords": [
+      "mistral",
+      "llama",
+      "benchmark"
+    ]
+  },
+  {
+    "query_id": "gt_101",
+    "query": "What does cosine similarity measure?",
+    "correct_answer": "The cosine of the angle between two vectors",
+    "acceptable_answers": [
+      "cosine of the angle",
+      "angle between",
+      "vectors"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Cosine_similarity.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "cosine",
+      "similarity",
+      "angle"
+    ]
+  },
+  {
+    "query_id": "gt_102",
+    "query": "What is semantic search?",
+    "correct_answer": "Search that understands the meaning and intent of a query rather than matching keywords",
+    "acceptable_answers": [
+      "meaning",
+      "intent",
+      "semantic"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Semantic_search.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "semantic",
+      "search",
+      "meaning"
+    ]
+  },
+  {
+    "query_id": "gt_103",
+    "query": "What is instruction tuning?",
+    "correct_answer": "Fine-tuning language models on instruction-response examples so they follow natural language instructions",
+    "acceptable_answers": [
+      "fine-tun",
+      "instructions",
+      "finetun"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Instruction_tuning.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "instruction",
+      "tuning",
+      "fine"
+    ]
+  },
+  {
+    "query_id": "gt_104",
+    "query": "In knowledge distillation, what is the larger model called?",
+    "correct_answer": "The teacher",
+    "acceptable_answers": [
+      "teacher"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Knowledge_distillation.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Teacher/student terminology.",
+    "expected_chunk_keywords": [
+      "distillation",
+      "teacher",
+      "student"
+    ]
+  },
+  {
+    "query_id": "gt_105",
+    "query": "How do diffusion models generate data?",
+    "correct_answer": "By learning to reverse a gradual noising process",
+    "acceptable_answers": [
+      "noise",
+      "denois",
+      "revers"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Diffusion_model.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "diffusion",
+      "noise"
+    ]
+  },
+  {
+    "query_id": "gt_106",
+    "query": "What is a reward model used for in RLHF?",
+    "correct_answer": "To predict human preferences and score model outputs during training",
+    "acceptable_answers": [
+      "preference",
+      "human feedback",
+      "reward"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Reward_model.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "reward",
+      "model",
+      "preference"
+    ]
+  },
+  {
+    "query_id": "gt_107",
+    "query": "What are emergent abilities in large language models?",
+    "correct_answer": "Abilities that appear in larger models but are not present in smaller ones",
+    "acceptable_answers": [
+      "larger",
+      "scale",
+      "smaller"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Emergent_abilities_of_large_language_models.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "emergent",
+      "abilities",
+      "scale"
+    ]
+  },
+  {
+    "query_id": "gt_108",
+    "query": "What is a jailbreak in the context of AI chatbots?",
+    "correct_answer": "A technique that bypasses a model's safety restrictions",
+    "acceptable_answers": [
+      "bypass",
+      "restriction",
+      "safety",
+      "circumvent"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Jailbreak_computer_science.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "jailbreak",
+      "safety"
+    ]
+  },
+  {
+    "query_id": "gt_109",
+    "query": "What is AI safety research focused on?",
+    "correct_answer": "Preventing harmful or unintended consequences from AI systems",
+    "acceptable_answers": [
+      "harm",
+      "risk",
+      "accident",
+      "misuse"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "AI_safety.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "safety",
+      "risk"
+    ]
+  },
+  {
+    "query_id": "gt_110",
+    "query": "What is interpretability in machine learning?",
+    "correct_answer": "Understanding how and why models make their decisions",
+    "acceptable_answers": [
+      "understand",
+      "explain",
+      "human"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Interpretability_machine_learning.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "interpretability",
+      "understand"
+    ]
+  },
+  {
+    "query_id": "gt_111",
+    "query": "What is speculative decoding used for?",
+    "correct_answer": "Speeding up LLM inference by using a smaller draft model",
+    "acceptable_answers": [
+      "speed",
+      "faster",
+      "draft",
+      "accelerat",
+      "inference"
+    ],
+    "category": "factual_recall",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "Speculative_decoding.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "speculative",
+      "decoding",
+      "draft"
+    ]
+  },
+  {
+    "query_id": "gt_112",
+    "query": "What is a multi-agent system?",
+    "correct_answer": "A system composed of multiple interacting intelligent agents",
+    "acceptable_answers": [
+      "multiple",
+      "agents",
+      "interact"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Multi-agent_system.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "multi-agent",
+      "agents"
+    ]
+  },
+  {
+    "query_id": "gt_113",
+    "query": "Which famous 2017 paper did Noam Shazeer co-author?",
+    "correct_answer": "Attention Is All You Need",
+    "acceptable_answers": [
+      "Attention Is All You Need",
+      "attention is all you need"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Noam_Shazeer.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "shazeer",
+      "attention"
+    ]
+  },
+  {
+    "query_id": "gt_114",
+    "query": "Which chatbot company did Noam Shazeer co-found?",
+    "correct_answer": "Character.AI",
+    "acceptable_answers": [
+      "Character.AI",
+      "Character.ai",
+      "Character"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Noam_Shazeer.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Shazeer co-founded Character.AI in 2021.",
+    "expected_chunk_keywords": [
+      "shazeer",
+      "character"
+    ]
+  },
+  {
+    "query_id": "gt_115",
+    "query": "Which large image dataset is Fei-Fei Li known for creating?",
+    "correct_answer": "ImageNet",
+    "acceptable_answers": [
+      "ImageNet",
+      "imagenet"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Fei-Fei_Li.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "fei-fei",
+      "imagenet"
+    ]
+  },
+  {
+    "query_id": "gt_116",
+    "query": "At which university is Percy Liang a professor?",
+    "correct_answer": "Stanford University",
+    "acceptable_answers": [
+      "Stanford",
+      "stanford"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Percy_Liang.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "percy liang",
+      "stanford"
+    ]
+  },
+  {
+    "query_id": "gt_117",
+    "query": "What is the name of Inflection AI's chatbot?",
+    "correct_answer": "Pi",
+    "acceptable_answers": [
+      "Pi"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Inflection_AI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Inflection's personal AI assistant is called Pi.",
+    "expected_chunk_keywords": [
+      "inflection",
+      "pi"
+    ]
+  },
+  {
+    "query_id": "gt_118",
+    "query": "Who co-founded Inflection AI?",
+    "correct_answer": "Mustafa Suleyman, Karen Simonyan, and Reid Hoffman",
+    "acceptable_answers": [
+      "Suleyman",
+      "Hoffman"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Inflection_AI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "inflection",
+      "suleyman"
+    ]
+  },
+  {
+    "query_id": "gt_119",
+    "query": "Which co-author of the Transformer paper co-founded Cohere?",
+    "correct_answer": "Aidan Gomez",
+    "acceptable_answers": [
+      "Aidan Gomez",
+      "Gomez"
+    ],
+    "category": "factual_recall",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "Cohere.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "cohere",
+      "gomez"
+    ]
+  },
+  {
+    "query_id": "gt_120",
+    "query": "What is a vector embedding?",
+    "correct_answer": "A numerical representation of data as a vector that captures semantic meaning",
+    "acceptable_answers": [
+      "representation",
+      "numerical",
+      "dense"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Vector_embedding.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "embedding",
+      "representation"
+    ]
+  },
+  {
+    "query_id": "gt_121",
+    "query": "What is the goal of model compression?",
+    "correct_answer": "Reducing the size and compute cost of models while preserving performance",
+    "acceptable_answers": [
+      "reduc",
+      "smaller",
+      "size"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Model_compression.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "compression",
+      "reduce"
+    ]
+  },
+  {
+    "query_id": "gt_122",
+    "query": "What does a red team do?",
+    "correct_answer": "Simulates attacks or adversaries to find weaknesses",
+    "acceptable_answers": [
+      "attack",
+      "adversar",
+      "weakness",
+      "vulnerab"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Red_team.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "red team",
+      "attack"
+    ]
+  },
+  {
+    "query_id": "gt_123",
+    "query": "What is learning to rank used for?",
+    "correct_answer": "Ranking items such as search results using machine learning",
+    "acceptable_answers": [
+      "ranking",
+      "search",
+      "information retrieval",
+      "rank"
+    ],
+    "category": "factual_recall",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Learning_to_rank.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "learning to rank",
+      "ranking"
+    ]
+  },
+  {
+    "query_id": "gt_124",
+    "query": "What is multimodal learning?",
+    "correct_answer": "Machine learning using multiple data modalities such as text and images",
+    "acceptable_answers": [
+      "modalit",
+      "text",
+      "image"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Multimodal_learning.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "multimodal",
+      "modalities"
+    ]
+  },
+  {
+    "query_id": "gt_125",
+    "query": "What is LangChain used for?",
+    "correct_answer": "Building applications powered by large language models",
+    "acceptable_answers": [
+      "applications",
+      "language model"
+    ],
+    "category": "factual_recall",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "LangChain.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "langchain",
+      "applications"
+    ]
+  },
+  {
+    "query_id": "gt_126",
+    "query": "What did Gemini 1.5 Pro score on MMLU?",
+    "correct_answer": "85.9%",
+    "acceptable_answers": [
+      "85.9"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From MMLU leaderboard.",
+    "expected_chunk_keywords": [
+      "gemini",
+      "mmlu",
+      "85.9"
+    ]
+  },
+  {
+    "query_id": "gt_127",
+    "query": "What did Mistral Large score on MMLU?",
+    "correct_answer": "81.2%",
+    "acceptable_answers": [
+      "81.2"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From MMLU leaderboard.",
+    "expected_chunk_keywords": [
+      "mistral",
+      "mmlu",
+      "81.2"
+    ]
+  },
+  {
+    "query_id": "gt_128",
+    "query": "What did GPT-3.5-Turbo score on MMLU?",
+    "correct_answer": "70.0%",
+    "acceptable_answers": [
+      "70.0",
+      "70%"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From MMLU leaderboard.",
+    "expected_chunk_keywords": [
+      "gpt-3.5",
+      "mmlu",
+      "70"
+    ]
+  },
+  {
+    "query_id": "gt_129",
+    "query": "What did Llama 2 70B score on MMLU?",
+    "correct_answer": "68.9%",
+    "acceptable_answers": [
+      "68.9"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From MMLU leaderboard.",
+    "expected_chunk_keywords": [
+      "llama",
+      "mmlu",
+      "68.9"
+    ]
+  },
+  {
+    "query_id": "gt_130",
+    "query": "What did Falcon 40B score on MMLU?",
+    "correct_answer": "55.4%",
+    "acceptable_answers": [
+      "55.4"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From MMLU leaderboard.",
+    "expected_chunk_keywords": [
+      "falcon",
+      "mmlu",
+      "55.4"
+    ]
+  },
+  {
+    "query_id": "gt_131",
+    "query": "What did GPT-NeoX-20B score on MMLU?",
+    "correct_answer": "33.6%",
+    "acceptable_answers": [
+      "33.6"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From MMLU leaderboard.",
+    "expected_chunk_keywords": [
+      "neox",
+      "mmlu",
+      "33.6"
+    ]
+  },
+  {
+    "query_id": "gt_132",
+    "query": "What is the expert human baseline on MMLU?",
+    "correct_answer": "89.8%",
+    "acceptable_answers": [
+      "89.8"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From MMLU human baseline.",
+    "expected_chunk_keywords": [
+      "mmlu",
+      "human",
+      "89.8"
+    ]
+  },
+  {
+    "query_id": "gt_133",
+    "query": "Who introduced the MMLU benchmark?",
+    "correct_answer": "Dan Hendrycks and colleagues in 2021",
+    "acceptable_answers": [
+      "Hendrycks"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From MMLU citation.",
+    "expected_chunk_keywords": [
+      "mmlu",
+      "hendrycks"
+    ]
+  },
+  {
+    "query_id": "gt_134",
+    "query": "What did Claude 3.5 Sonnet score on BIG-Bench Hard?",
+    "correct_answer": "93.1%",
+    "acceptable_answers": [
+      "93.1"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_bbh.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From BBH leaderboard.",
+    "expected_chunk_keywords": [
+      "sonnet",
+      "bbh",
+      "93.1"
+    ]
+  },
+  {
+    "query_id": "gt_135",
+    "query": "What did PaLM 540B score on BIG-Bench Hard with chain-of-thought?",
+    "correct_answer": "65.2%",
+    "acceptable_answers": [
+      "65.2"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_bbh.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From BBH leaderboard.",
+    "expected_chunk_keywords": [
+      "palm",
+      "bbh",
+      "65.2"
+    ]
+  },
+  {
+    "query_id": "gt_136",
+    "query": "What is the average human rater score on BIG-Bench Hard?",
+    "correct_answer": "Approximately 67.7%",
+    "acceptable_answers": [
+      "67.7"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_bbh.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From BBH human baseline.",
+    "expected_chunk_keywords": [
+      "bbh",
+      "human",
+      "67.7"
+    ]
+  },
+  {
+    "query_id": "gt_137",
+    "query": "What did Llama 3.1 8B Instruct score on IFEval?",
+    "correct_answer": "80.4%",
+    "acceptable_answers": [
+      "80.4"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_ifeval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From IFEval leaderboard.",
+    "expected_chunk_keywords": [
+      "llama",
+      "ifeval",
+      "80.4"
+    ]
+  },
+  {
+    "query_id": "gt_138",
+    "query": "What did Qwen2.5-72B-Instruct score on IFEval?",
+    "correct_answer": "84.1%",
+    "acceptable_answers": [
+      "84.1"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_ifeval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From IFEval leaderboard.",
+    "expected_chunk_keywords": [
+      "qwen",
+      "ifeval",
+      "84.1"
+    ]
+  },
+  {
+    "query_id": "gt_139",
+    "query": "Who introduced the IFEval benchmark?",
+    "correct_answer": "Zhou et al. at Google in 2023",
+    "acceptable_answers": [
+      "Zhou"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_ifeval.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From IFEval citation.",
+    "expected_chunk_keywords": [
+      "ifeval",
+      "zhou"
+    ]
+  },
+  {
+    "query_id": "gt_140",
+    "query": "What did Llama 3.1 8B score on GPQA Diamond?",
+    "correct_answer": "30.4%",
+    "acceptable_answers": [
+      "30.4"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gpqa.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From GPQA leaderboard.",
+    "expected_chunk_keywords": [
+      "llama",
+      "gpqa",
+      "30.4"
+    ]
+  },
+  {
+    "query_id": "gt_141",
+    "query": "What accuracy do skilled non-experts with web access reach on GPQA?",
+    "correct_answer": "Approximately 34%",
+    "acceptable_answers": [
+      "34"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_gpqa.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From GPQA overview.",
+    "expected_chunk_keywords": [
+      "gpqa",
+      "non-expert",
+      "34"
+    ]
+  },
+  {
+    "query_id": "gt_142",
+    "query": "What did GPT-4o score on GSM8K?",
+    "correct_answer": "94.9%",
+    "acceptable_answers": [
+      "94.9"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gsm8k.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From GSM8K leaderboard.",
+    "expected_chunk_keywords": [
+      "gpt-4o",
+      "gsm8k",
+      "94.9"
+    ]
+  },
+  {
+    "query_id": "gt_143",
+    "query": "What did GPT-3.5-Turbo score on GSM8K?",
+    "correct_answer": "78.9%",
+    "acceptable_answers": [
+      "78.9"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gsm8k.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From GSM8K leaderboard.",
+    "expected_chunk_keywords": [
+      "gpt-3.5",
+      "gsm8k",
+      "78.9"
+    ]
+  },
+  {
+    "query_id": "gt_144",
+    "query": "How many steps of arithmetic do GSM8K problems require?",
+    "correct_answer": "Between 2 and 8 steps",
+    "acceptable_answers": [
+      "2 and 8"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_gsm8k.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From GSM8K overview.",
+    "expected_chunk_keywords": [
+      "gsm8k",
+      "steps"
+    ]
+  },
+  {
+    "query_id": "gt_145",
+    "query": "What did Mistral 7B score on HumanEval?",
+    "correct_answer": "30.5%",
+    "acceptable_answers": [
+      "30.5"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_humaneval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From HumanEval leaderboard.",
+    "expected_chunk_keywords": [
+      "mistral",
+      "humaneval",
+      "30.5"
+    ]
+  },
+  {
+    "query_id": "gt_146",
+    "query": "What is the primary evaluation metric of HumanEval?",
+    "correct_answer": "pass@1",
+    "acceptable_answers": [
+      "pass@1",
+      "pass@k"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_humaneval.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From HumanEval task definition.",
+    "expected_chunk_keywords": [
+      "humaneval",
+      "pass@1"
+    ]
+  },
+  {
+    "query_id": "gt_147",
+    "query": "What did Llama 3.1 405B score on Arena-Hard?",
+    "correct_answer": "Approximately 69.3",
+    "acceptable_answers": [
+      "69.3"
+    ],
+    "category": "benchmark_multihop",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_arena_hard.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "From Arena-Hard leaderboard.",
+    "expected_chunk_keywords": [
+      "llama",
+      "arena",
+      "69.3"
+    ]
+  },
+  {
+    "query_id": "gt_148",
+    "query": "Which scores higher on MMLU: GPT-4o or Claude 3 Opus?",
+    "correct_answer": "GPT-4o (87.2% vs 86.8%)",
+    "acceptable_answers": [
+      "GPT-4o",
+      "gpt-4o"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "87.2 vs 86.8.",
+    "expected_chunk_keywords": [
+      "mmlu",
+      "gpt-4o",
+      "opus"
+    ]
+  },
+  {
+    "query_id": "gt_149",
+    "query": "Which does better on MMLU: Mixtral 8x7B or GPT-3.5-Turbo?",
+    "correct_answer": "Mixtral 8x7B (70.6% vs 70.0%)",
+    "acceptable_answers": [
+      "Mixtral",
+      "mixtral"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "70.6 vs 70.0.",
+    "expected_chunk_keywords": [
+      "mmlu",
+      "mixtral",
+      "gpt-3.5"
+    ]
+  },
+  {
+    "query_id": "gt_150",
+    "query": "Which model does better on GSM8K: GPT-4 or Llama 3.1 70B?",
+    "correct_answer": "Llama 3.1 70B (93.0% vs 92.0%)",
+    "acceptable_answers": [
+      "Llama 3.1",
+      "llama"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gsm8k.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "93.0 vs 92.0.",
+    "expected_chunk_keywords": [
+      "gsm8k",
+      "llama",
+      "gpt-4"
+    ]
+  },
+  {
+    "query_id": "gt_151",
+    "query": "Which scores higher on GSM8K: BLOOM 176B or GPT-NeoX-20B?",
+    "correct_answer": "BLOOM 176B (16.4% vs 8.5%)",
+    "acceptable_answers": [
+      "BLOOM",
+      "bloom"
+    ],
+    "category": "comparative",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_gsm8k.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "16.4 vs 8.5.",
+    "expected_chunk_keywords": [
+      "gsm8k",
+      "bloom",
+      "neox"
+    ]
+  },
+  {
+    "query_id": "gt_152",
+    "query": "On HumanEval, which is better: StarCoder or Mistral 7B?",
+    "correct_answer": "StarCoder (33.6% vs 30.5%)",
+    "acceptable_answers": [
+      "StarCoder",
+      "starcoder"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_humaneval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "33.6 vs 30.5.",
+    "expected_chunk_keywords": [
+      "humaneval",
+      "starcoder",
+      "mistral"
+    ]
+  },
+  {
+    "query_id": "gt_153",
+    "query": "Which scored higher on BIG-Bench Hard: GPT-4 or Claude 3 Sonnet?",
+    "correct_answer": "GPT-4 (86.7% vs 82.9%)",
+    "acceptable_answers": [
+      "GPT-4",
+      "gpt-4"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_bbh.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "86.7 vs 82.9.",
+    "expected_chunk_keywords": [
+      "bbh",
+      "gpt-4",
+      "sonnet"
+    ]
+  },
+  {
+    "query_id": "gt_154",
+    "query": "On IFEval, which is better: GPT-4o or Gemini 1.5 Pro?",
+    "correct_answer": "GPT-4o (85.6% vs 79.0%)",
+    "acceptable_answers": [
+      "GPT-4o",
+      "gpt-4o"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_ifeval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "85.6 vs 79.0.",
+    "expected_chunk_keywords": [
+      "ifeval",
+      "gpt-4o",
+      "gemini"
+    ]
+  },
+  {
+    "query_id": "gt_155",
+    "query": "Which scores higher on GPQA Diamond: GPT-4o or Llama 3.1 405B?",
+    "correct_answer": "GPT-4o (53.6% vs 51.1%)",
+    "acceptable_answers": [
+      "GPT-4o",
+      "gpt-4o"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gpqa.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "53.6 vs 51.1.",
+    "expected_chunk_keywords": [
+      "gpqa",
+      "gpt-4o",
+      "llama"
+    ]
+  },
+  {
+    "query_id": "gt_156",
+    "query": "On Arena-Hard, which is better: Llama 3.1 405B or Mistral Large?",
+    "correct_answer": "Mistral Large (70.4 vs 69.3)",
+    "acceptable_answers": [
+      "Mistral Large",
+      "mistral large"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_arena_hard.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "70.4 vs 69.3.",
+    "expected_chunk_keywords": [
+      "arena",
+      "mistral",
+      "llama"
+    ]
+  },
+  {
+    "query_id": "gt_157",
+    "query": "On Arena-Hard, does Llama 3 70B score above or below the GPT-4-0314 baseline?",
+    "correct_answer": "Below (46.6 vs 50.0)",
+    "acceptable_answers": [
+      "below",
+      "lower",
+      "under",
+      "46.6"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_arena_hard.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "46.6 vs baseline 50.0.",
+    "expected_chunk_keywords": [
+      "arena",
+      "llama",
+      "baseline"
+    ]
+  },
+  {
+    "query_id": "gt_158",
+    "query": "Which model does better on HumanEval: Llama 2 7B or GPT-NeoX-20B?",
+    "correct_answer": "GPT-NeoX-20B (15.4% vs 12.8%)",
+    "acceptable_answers": [
+      "NeoX",
+      "neox"
+    ],
+    "category": "comparative",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_humaneval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "15.4 vs 12.8.",
+    "expected_chunk_keywords": [
+      "humaneval",
+      "neox",
+      "llama"
+    ]
+  },
+  {
+    "query_id": "gt_159",
+    "query": "On GSM8K, which is better: Mistral 7B or Llama 2 70B?",
+    "correct_answer": "Llama 2 70B (56.8% vs 52.1%)",
+    "acceptable_answers": [
+      "Llama 2 70B",
+      "llama 2 70b"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_gsm8k.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "56.8 vs 52.1.",
+    "expected_chunk_keywords": [
+      "gsm8k",
+      "mistral",
+      "llama"
+    ]
+  },
+  {
+    "query_id": "gt_160",
+    "query": "Which scored higher on MMLU: Llama 3 70B or Llama 3.1 70B?",
+    "correct_answer": "Llama 3.1 70B (83.6% vs 82.0%)",
+    "acceptable_answers": [
+      "3.1"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "83.6 vs 82.0.",
+    "expected_chunk_keywords": [
+      "mmlu",
+      "llama",
+      "83.6"
+    ]
+  },
+  {
+    "query_id": "gt_161",
+    "query": "Which model has the higher IFEval score: Mistral Large or GPT-4?",
+    "correct_answer": "Mistral Large (80.0% vs 79.3%)",
+    "acceptable_answers": [
+      "Mistral Large",
+      "mistral large"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_ifeval.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "80.0 vs 79.3.",
+    "expected_chunk_keywords": [
+      "ifeval",
+      "mistral",
+      "gpt-4"
+    ]
+  },
+  {
+    "query_id": "gt_162",
+    "query": "Which is better on BIG-Bench Hard: Gemini 1.5 Pro or Claude 3 Haiku?",
+    "correct_answer": "Gemini 1.5 Pro (84.0% vs 73.7%)",
+    "acceptable_answers": [
+      "Gemini",
+      "gemini"
+    ],
+    "category": "comparative",
+    "difficulty": "hard",
+    "should_refuse": false,
+    "source_document": "benchmark_bbh.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "84.0 vs 73.7.",
+    "expected_chunk_keywords": [
+      "bbh",
+      "gemini",
+      "haiku"
+    ]
+  },
+  {
+    "query_id": "gt_163",
+    "query": "Who founded xAI?",
+    "correct_answer": "Elon Musk",
+    "acceptable_answers": [
+      "Elon Musk",
+      "Musk"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "xAI_company.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "xAI (company) article fetched 2026-07-06 after the bare 'xAI' title turned out to be a disambiguation page.",
+    "expected_chunk_keywords": [
+      "xai",
+      "musk"
+    ]
+  },
+  {
+    "query_id": "gt_164",
+    "query": "Who is the CEO of Perplexity AI?",
+    "correct_answer": "Aravind Srinivas",
+    "acceptable_answers": [
+      "Srinivas",
+      "Aravind"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Perplexity_AI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "perplexity",
+      "srinivas"
+    ]
+  },
+  {
+    "query_id": "gt_165",
+    "query": "Which company acqui-hired most of Inflection AI's workforce in 2024?",
+    "correct_answer": "Microsoft",
+    "acceptable_answers": [
+      "Microsoft",
+      "microsoft"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Inflection_AI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "March 2024: Microsoft hired nearly the entire 70-person workforce.",
+    "expected_chunk_keywords": [
+      "inflection",
+      "microsoft"
+    ]
+  },
+  {
+    "query_id": "gt_166",
+    "query": "In which city is Cohere headquartered?",
+    "correct_answer": "Toronto",
+    "acceptable_answers": [
+      "Toronto",
+      "toronto"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Cohere.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Cohere is headquartered in Toronto.",
+    "expected_chunk_keywords": [
+      "cohere",
+      "toronto"
+    ]
+  },
+  {
+    "query_id": "gt_167",
+    "query": "Who founded Stability AI?",
+    "correct_answer": "Emad Mostaque",
+    "acceptable_answers": [
+      "Mostaque",
+      "Emad"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Stability_AI.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "stability",
+      "mostaque"
+    ]
+  },
+  {
+    "query_id": "gt_168",
+    "query": "How many natural languages was BLOOM trained on?",
+    "correct_answer": "46 natural languages",
+    "acceptable_answers": [
+      "46"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "BLOOM_language_model.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "bloom",
+      "46",
+      "languages"
+    ]
+  },
+  {
+    "query_id": "gt_169",
+    "query": "How many parameters does BLOOM have?",
+    "correct_answer": "176 billion",
+    "acceptable_answers": [
+      "176"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "BLOOM_language_model.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "bloom",
+      "176"
+    ]
+  },
+  {
+    "query_id": "gt_170",
+    "query": "What is Qwen2.5-Coder-32B-Instruct specialized for?",
+    "correct_answer": "Code generation and coding tasks",
+    "acceptable_answers": [
+      "code",
+      "coding"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Qwen__Qwen2.5-Coder-32B-Instruct.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New model card 2026-07.",
+    "expected_chunk_keywords": [
+      "qwen",
+      "coder",
+      "code"
+    ]
+  },
+  {
+    "query_id": "gt_171",
+    "query": "What model sizes are in the text-only Llama 3.2 release?",
+    "correct_answer": "1B and 3B",
+    "acceptable_answers": [
+      "1B",
+      "3B"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "meta-llama__Llama-3.2-1B.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New model card 2026-07.",
+    "expected_chunk_keywords": [
+      "llama",
+      "3.2",
+      "1b"
+    ]
+  },
+  {
+    "query_id": "gt_172",
+    "query": "What does the WizardCoder model specialize in?",
+    "correct_answer": "Code generation",
+    "acceptable_answers": [
+      "code",
+      "coding"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "WizardLMTeam__WizardCoder-33B-V1.1.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New model card 2026-07.",
+    "expected_chunk_keywords": [
+      "wizardcoder",
+      "code"
+    ]
+  },
+  {
+    "query_id": "gt_173",
+    "query": "Which company released the OPT-66B model?",
+    "correct_answer": "Meta",
+    "acceptable_answers": [
+      "Meta",
+      "meta"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "facebook__opt-66b.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New model card 2026-07.",
+    "expected_chunk_keywords": [
+      "opt",
+      "meta"
+    ]
+  },
+  {
+    "query_id": "gt_174",
+    "query": "What base architecture is Flan-T5 built on?",
+    "correct_answer": "The T5 encoder-decoder transformer",
+    "acceptable_answers": [
+      "encoder",
+      "T5"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "google__flan-t5-xxl.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New model card 2026-07.",
+    "expected_chunk_keywords": [
+      "flan",
+      "t5"
+    ]
+  },
+  {
+    "query_id": "gt_175",
+    "query": "Which organization released Yi-1.5-9B?",
+    "correct_answer": "01.AI",
+    "acceptable_answers": [
+      "01.AI",
+      "01-ai",
+      "01.ai"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "01-ai__Yi-1.5-9B.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New model card 2026-07.",
+    "expected_chunk_keywords": [
+      "yi",
+      "01"
+    ]
+  },
+  {
+    "query_id": "gt_176",
+    "query": "In what units is a language model's context window measured?",
+    "correct_answer": "Tokens",
+    "acceptable_answers": [
+      "tokens",
+      "token"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "Context_window.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New Wikipedia article 2026-07.",
+    "expected_chunk_keywords": [
+      "context window",
+      "tokens"
+    ]
+  },
+  {
+    "query_id": "gt_177",
+    "query": "What base model is Mixtral-8x22B-Instruct-v0.1 fine-tuned from?",
+    "correct_answer": "Mixtral-8x22B-v0.1",
+    "acceptable_answers": [
+      "fine-tuned",
+      "Mixtral-8x22B-v0.1"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "mistralai__Mixtral-8x22B-Instruct-v0.1.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Card states it is an instruct fine-tuned version of Mixtral-8x22B-v0.1.",
+    "expected_chunk_keywords": [
+      "mixtral",
+      "instruct",
+      "fine-tuned"
+    ]
+  },
+  {
+    "query_id": "gt_178",
+    "query": "What kind of model is StableLM 2 12B?",
+    "correct_answer": "A language model",
+    "acceptable_answers": [
+      "language model"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "easy",
+    "should_refuse": false,
+    "source_document": "stabilityai__stablelm-2-12b.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New model card 2026-07.",
+    "expected_chunk_keywords": [
+      "stablelm",
+      "language"
+    ]
+  },
+  {
+    "query_id": "gt_179",
+    "query": "Which base model is Hermes 3 (8B) built on?",
+    "correct_answer": "Llama 3.1 8B",
+    "acceptable_answers": [
+      "Llama",
+      "llama"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "NousResearch__Hermes-3-Llama-3.1-8B.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New model card 2026-07.",
+    "expected_chunk_keywords": [
+      "hermes",
+      "llama"
+    ]
+  },
+  {
+    "query_id": "gt_180",
+    "query": "How many parameters does the largest Llama 3.1 model have?",
+    "correct_answer": "405 billion",
+    "acceptable_answers": [
+      "405"
+    ],
+    "category": "temporal_freshness",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "meta-llama__Meta-Llama-3.1-405B-Instruct.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "New model card 2026-07.",
+    "expected_chunk_keywords": [
+      "llama",
+      "405"
+    ]
+  },
+  {
+    "query_id": "gt_181",
+    "query": "What will be the parameter count of Llama 5?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Unannounced future model — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_182",
+    "query": "What is Dario Amodei's home address?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Private personal information — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_183",
+    "query": "Which stocks should I buy to profit from AI?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Financial advice, outside corpus — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_184",
+    "query": "What is the recipe for chocolate chip cookies?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Entirely outside the AI/ML domain — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_185",
+    "query": "What will Claude score on MMLU in 2030?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Future prediction — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_186",
+    "query": "How much revenue did Anthropic earn last quarter?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "medium",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Undisclosed financials, not in corpus — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_187",
+    "query": "What is the meaning of life?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Philosophical, outside corpus — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_188",
+    "query": "When will artificial general intelligence be achieved?",
+    "correct_answer": "I cannot find this information in my knowledge base.",
+    "acceptable_answers": [
+      "I cannot find this information in my knowledge base.",
+      "cannot find",
+      "no information"
+    ],
+    "category": "out_of_scope",
+    "difficulty": "medium",
+    "should_refuse": true,
+    "source_document": "",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "Future prediction — must refuse.",
+    "expected_chunk_keywords": []
+  },
+  {
+    "query_id": "gt_189",
+    "query": "The Vision Transformer was invented by OpenAI, right?",
+    "correct_answer": "No, the Vision Transformer was introduced by researchers at Google",
+    "acceptable_answers": [
+      "Google",
+      "google",
+      "No"
+    ],
+    "category": "adversarial",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "Vision_transformer.txt",
+    "multi_hop": false,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "False-premise; ViT is from Google (Dosovitskiy et al.).",
+    "expected_chunk_keywords": [
+      "vision transformer",
+      "google"
+    ]
+  },
+  {
+    "query_id": "gt_190",
+    "query": "Did BLOOM score 90% on MMLU?",
+    "correct_answer": "No, BLOOM scored 39.2% on MMLU",
+    "acceptable_answers": [
+      "39.2",
+      "No",
+      "no"
+    ],
+    "category": "adversarial",
+    "difficulty": "medium",
+    "should_refuse": false,
+    "source_document": "benchmark_mmlu.txt",
+    "multi_hop": true,
+    "ground_truth_verified_date": "2026-07-07",
+    "notes": "False number in premise; correct value 39.2%.",
+    "expected_chunk_keywords": [
+      "bloom",
+      "mmlu",
+      "39.2"
+    ]
+  }
+]

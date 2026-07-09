@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+  scheduler:
+    build: .
+    container_name: ragops_scheduler
+    command: python scheduler/main_scheduler.py
+    volumes:
+      - ragops_data:/app/data
+      - ragops_db:/app/database
+      - ragops_logs:/app/logs
+      - ragops_reports:/app/reports
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app
+      - RAGOPS_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "from config.settings import settings; print(settings.ragops_env)"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+
+  dashboard:
+    build: .
+    container_name: ragops_dashboard
+    command: streamlit run dashboard/app.py --server.port 8501 --server.headless true --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    volumes:
+      - ragops_data:/app/data
+      - ragops_db:/app/database
+      - ragops_logs:/app/logs
+      - ragops_reports:/app/reports
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app
+      - RAGOPS_ENV=production
+    depends_on:
+      - scheduler
+    restart: unless-stopped
+
+volumes:
+  ragops_data:
+  ragops_db:
+  ragops_logs:
+  ragops_reports:

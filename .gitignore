@@ -1,0 +1,22 @@
+.env
+# SQLite sidecar files (the .db itself IS committed so the public dashboard has data)
+database/ragops.db-wal
+database/ragops.db-shm
+data/raw/
+# processed data: commit only all_chunks.json (dashboard corpus stats)
+data/processed/*
+!data/processed/all_chunks.json
+data/chromadb/
+logs/
+reports/
+experiments/experiment_log.txt
+__pycache__/
+*.pyc
+.DS_Store
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+dist/
+*.egg-info/
+.claude/
