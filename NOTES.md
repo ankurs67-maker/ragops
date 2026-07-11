@@ -256,6 +256,50 @@ context (closer to PARTIAL_ANSWER).
 
 ---
 
+## Results Log — A/B Validation of Retrieval Fixes, 100-Query Scale (2026-07-06)
+
+Fixes under test: sibling-chunk expansion (Decision 10), acronym query
+variant (Decision 11), extended prose restatements in all benchmark files.
+
+| Cycle | Pass | Fail | Retr | Util | Faith | Fact | Refusal | Health | Secs |
+|-------|------|------|------|------|-------|------|---------|--------|------|
+| A/B 1 | 84 | 16 | 2.55 | 100.0 | 0.927 | 1.000 | 0.91 | 92.9 | 1028 |
+| A/B 2 | 84 | 16 | 2.55 | 98.0 | 0.935 | 1.000 | 0.91 | 93.0 | 958 |
+
+vs 5-cycle baseline: pass 84/84 (baseline 77-83), FALSE_REFUSAL 9/9
+(baseline 13-20), retrieval 2.55 (baseline 2.49). Evidence cases: gt_042
+and gt_021 passed both cycles (failed all 5 baseline cycles). gt_047
+stopped refusing and produced the correct 59.4 — its residual
+FAITHFULNESS_FAILURE tag exposed the judge context truncation bug
+(Decision 12, fixed after these cycles). **Sibling expansion kept enabled.**
+
+---
+
+## Results Log — 190-Query Scale (2026-07-09)
+
+After: judge truncation removal (Decision 12), xAI corpus fix (Decision 13),
+ground truth 100 → 190 (all non-refusal answers source-verified).
+
+| Cycle | Pass | Fail | Retr | Util | Faith | Fact | Refusal | Health | Secs |
+|-------|------|------|------|------|-------|------|---------|--------|------|
+| 190-1 | 176 (92.6%) | 14 | 2.66 | 100.0 | 0.983 | 0.995 | 0.942 | 96.1 | 2127 |
+| 190-2 | 179 (94.2%) | 11 | 2.66 | 100.0 | 0.995 | 0.995 | 0.947 | 96.3 | 4476 |
+
+Timing note for planning: a 190-probe cycle took 35 min (cycle 1) and
+75 min (cycle 2 — provider slowdown/rate limiting); budget 35-80 min.
+
+Failure mix is now almost entirely FALSE_REFUSAL (10 per cycle);
+FAITHFULNESS_FAILURE dropped to 3 → 1 after the judge truncation fix.
+Evidence cases at 190 scale: gt_047, gt_021, gt_027 PASS; gt_042 regressed
+to FALSE_REFUSAL (its BBH leaderboard chunk competes against 5 more Llama
+model cards; passes intermittently). Remaining persistent failures are a
+small stable set: gt_006, gt_018, gt_042, gt_060, gt_065, gt_068, gt_083
+plus 4-6 of the new queries (gt_107, gt_117, gt_145, gt_175) — all the
+same mechanism: comparative/benchmark questions where entity-heavy model
+cards crowd out the answer-bearing chunk.
+
+---
+
 ## Dashboard Design System (2026-07-06)
 
 `dashboard/components/theme.py` defines the product-wide palette (deep navy

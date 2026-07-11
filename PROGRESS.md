@@ -101,3 +101,33 @@ Part D (issues found & fixed — see DECISIONS.md 4-9 and NOTES.md):
 Inter-rater reliability: 90% agreement (9/10) on cycle-5 sample.
 Test results: 60/60 PASSED (45 prior + 15 new: t-test, Reflexion lesson,
   classifier, theme/design-system).
+
+## Retrieval-Fix + 190-Query + Deployment Session — COMPLETE (through Part 4)
+Completed: 2026-07-09 through 2026-07-11
+Part 1 (dominant failure mode): sibling-chunk expansion for PwC chunks
+  (rag_system/retriever.py, flag sibling_expansion_enabled, Decision 10);
+  KEY RESULTS IN PLAIN LANGUAGE prose added to all 7 benchmark files.
+Part 2 (acronym gap): ACRONYM_MAP 4th query variant, word-boundary matched
+  (Decision 11); 3 new retriever tests.
+Part 3 (A/B validation, 100 queries): pass 84/84 vs baseline 77-83;
+  FALSE_REFUSAL 9/9 vs baseline 13-20. gt_042 + gt_021 fixed. Sibling
+  expansion KEPT. Exposed + fixed judge context truncation bug (Decision 12:
+  measure_faithfulness/measure_utilization now judge full context).
+Part 4 (190 queries): ground truth 100→190 at SPEC §14 distribution
+  (factual_recall 60, benchmark_multihop 40, comparative 30,
+  temporal_freshness 30, out_of_scope 20, adversarial 10); every non-refusal
+  answer programmatically source-verified before write (caught + fixed the
+  xAI disambiguation-stub corpus bug, Decision 13; index now 1,199 chunks).
+  Two 190-probe cycles: 176/190 (92.6%) and 179/190 (94.2%), health 96.1/96.3,
+  faith 0.983/0.995. Cycle timing: 35-80 min per 190-probe cycle.
+Deployment: repo pushed to https://github.com/ankurs67-maker/ragops (public;
+  includes DB snapshot + all_chunks.json so the dashboard renders data;
+  .env excluded; llama-index removed / openai declared, Decision 14).
+  Streamlit Community Cloud deploy initiated by user. CI workflow NOT pushed
+  (token lacks workflow scope — needs `gh auth refresh -s workflow`).
+Part 5 (judge-provider split): IN PROGRESS — SCORING_PROVIDER=groq set
+  2026-07-11, one 190-probe comparison cycle running
+  (reports/cycle_comparison_groqjudge190_*.json when done). Compare
+  faith/fact vs same-provider 190 baseline (0.983-0.995 / 0.995), then
+  decide keep-or-revert and document in DECISIONS.md.
+Test results: 63/63 PASSED.
