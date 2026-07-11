@@ -139,3 +139,14 @@ Files: ingestion/fetch_wikipedia.py, config/ground_truth.json (gt_027, gt_163)
 Finding: The article fetched under the bare title "xAI" is a disambiguation page ("Xai, XAI or xAI may refer to:") with no company content — the earlier substring verification of gt_027 was a false positive ("xAI" matched the disambiguation text itself). This explains gt_027's persistent failure across all baseline cycles.
 Change: Fetched the real article "xAI (company)" (saved as xAI_company.txt), deleted the stub, re-pointed gt_027 and authored gt_163 against the real article, rebuilt the index (1,199 chunks).
 Lesson: substring verification can false-positive on stub/disambiguation pages; the methodology check should also assert a minimum source-document length.
+
+---
+
+## Decision 14 — llama-index removed from requirements; openai added explicitly
+Date: 2026-07-11
+Phase: Deployment session
+File: requirements.txt
+Specification said: requirements include llama-index==0.10.68 plus two llama-index plugins.
+Finding: No file in the codebase imports llama_index — the implementation uses chromadb directly (consistent with the Phase 2/3 build). Worse, utils/llm_client.py imports `openai`, which was never a declared dependency; it only worked locally because llama-index pulled it in transitively. A fresh install from requirements.txt (e.g. Streamlit Community Cloud) would crash the dashboard.
+Change: Removed the three llama-index lines; added `openai>=1.40,<3` explicitly.
+Impact: Fresh installs are smaller, faster, and actually complete. Local behaviour unchanged.
